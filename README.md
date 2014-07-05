@@ -6,7 +6,7 @@ Easy integration for Chosen v1.1.0 with Ember v1.5+. It goes without saying that
 Usage
 ------
 
-Template:
+**Template:**
 
 ```
 {{chosen
@@ -18,7 +18,7 @@ Template:
 }}
 ```
 
-View:
+**View:**
 
 ```
 App.FormView = Em.View.extend({
