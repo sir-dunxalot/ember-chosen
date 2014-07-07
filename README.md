@@ -10,7 +10,7 @@ Usage
 
 ```
 {{chosen
-  content=view.businessesArray
+  content=businessesArray
   optionLabelPath='content.name'
   optionValuePath='content.id'
   prompt='Choose...'
@@ -18,11 +18,16 @@ Usage
 }}
 ```
 
-**View:**
+**Controller (or view):**
 
 ```
-App.FormView = Em.View.extend({
-  businessesArray: Em.A([]),
+App.FormController = Em.View.extend({
+  businessesArray: Em.A(),
+  
+  init: function() {
+    this.setBusinessesArray();
+    this._super();
+  }
   
   setBusinessesArray: function() {
     var _this = this;
@@ -30,7 +35,7 @@ App.FormView = Em.View.extend({
     _this.get('controller.store').find('business').then(function(businesses) {
       _this.set('businessesArray', array);
     }
-  }.on('willInsertElement'),
+  },
 })
 ```
 
