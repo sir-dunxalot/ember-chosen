@@ -27,7 +27,7 @@ App.FormController = Em.View.extend({
   init: function() {
     this.setBusinessesArray();
     this._super();
-  }
+  },
   
   setBusinessesArray: function() {
     var _this = this;
