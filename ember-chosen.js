@@ -7,8 +7,12 @@ App.UnboundSelectOptionView = Ember.SelectOption.extend({
 });
 
 App.ChosenSelectView = Em.Select.extend({
-  templateName: 'chosen_select',
   attributeBindings: ['prompt:data-placeholder'],
+  templateName: 'chosen_select',
+
+  renderChosen: function() {
+    this.$().chosen();
+  }.on('didInsertElement'),
 
   watch: function() {
     Em.run.sync();
@@ -18,9 +22,5 @@ App.ChosenSelectView = Em.Select.extend({
       }
     });
   }.observes('content.@each.data'), // If content is a property on the view you can just use content.[]
-
-  renderSelectize: function() {
-    this.$().chosen();
-  }.on('didInsertElement'),
-
+  
 });
