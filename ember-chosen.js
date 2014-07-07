@@ -13,7 +13,9 @@ App.ChosenSelectView = Em.Select.extend({
   watch: function() {
     Em.run.sync();
     Em.run.scheduleOnce('afterRender', this, function() {
-      this.$().trigger('chosen:updated');
+      if (this.get('state') === 'inDOM') {
+        this.$().trigger('chosen:updated');
+      }
     });
   }.observes('content.@each.data'), // If content is a property on the view you can just use content.[]
 
