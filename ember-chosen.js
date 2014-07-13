@@ -24,3 +24,5 @@ App.ChosenSelectView = Em.Select.extend({
   }.observes('content.@each.data'), // If content is a property on the view you can just use content.[]
   
 });
+
+Em.Handlebars.helper('chosen', App.ChosenSelectView);
