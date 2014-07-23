@@ -18,10 +18,12 @@ Usage
 }}
 ```
 
-**Controller (or view):**
+**Controller (or view or route):**
+
+Obviously you can bind the content array however you please, but below is an example:
 
 ```
-App.FormController = Em.View.extend({
+App.FormController = Em.ObjectController.extend({
   businessesArray: Em.A(),
   
   init: function() {
@@ -32,8 +34,9 @@ App.FormController = Em.View.extend({
   setBusinessesArray: function() {
     var _this = this;
     
+    // Set the array
     _this.get('controller.store').find('business').then(function(businesses) {
-      _this.set('businessesArray', array);
+      _this.set('businessesArray', businesses);
     }
   },
 })
