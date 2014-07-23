@@ -3,6 +3,11 @@ ember-chosen
 
 Easy integration for Chosen v1.1.0 with Ember v1.5+. It goes without saying that you need Chosen and Ember for this to work.
 
+Installation
+------
+
+Ember-CLI integration is coming soon but, for now, grab `ember-chosen.js` and `templates/chosen-select.js`.
+
 Usage
 ------
 
