@@ -6,7 +6,7 @@ Easy integration for Chosen v1.1.0 with Ember v1.5+. It goes without saying that
 Installation
 ------
 
-Ember-CLI integration is coming soon but, for now, grab `ember-chosen.js` and `templates/chosen-select.js`.
+Ember-CLI integration is coming soon but, for now, grab `ember-chosen.js` and `templates/chosen-select.hbs`.
 
 Usage
 ------
